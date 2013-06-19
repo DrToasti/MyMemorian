@@ -1,0 +1,37 @@
+name: MyMemorian
+main: org.drtoasti.mymemorian.MyMemorian
+version: 1.0
+author: DrToasti
+description: TestPlugin
+
+
+commands:
+  heal:
+    description: healing a player
+    usage: /<command>
+    permission: mymemorian.heal
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+    
+  gladi:
+    description: spamt gladi zu
+    usage: /<command>
+    permission: mymemorian.gladi
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+    
+  teamchat:
+    description: bla
+    usage: /<command> <nachricht>
+    permission: mymemorian.teamchat
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+    aliases: tc
+    
+  join:
+    description: bla
+    usage: /<command> <team>
+    permission: mymemorian.join
+  kill:
+    description: kill a player
+    usage: /<command>
+    permission: mymemorian.kill
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+    
