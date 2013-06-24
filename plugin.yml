@@ -8,7 +8,7 @@ description: TestPlugin
 commands:
   heal:
     description: healing a player
-    usage: /<command>
+    usage: /<command> <life|food> <player|all>
     permission: mymemorian.heal
     permission-message: 'Dazu fehlt dir die Berechtigung!'
     
@@ -34,4 +34,18 @@ commands:
     usage: /<command>
     permission: mymemorian.kill
     permission-message: 'Dazu fehlt dir die Berechtigung!'
-    
+  give:
+    description: give a item a player
+    usage: /<command>
+    permission: mymemorian.give
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+  msg:
+    description: give a item a player
+    usage: /<command>
+    permission: mymemorian.give
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+  broadcast:
+    description: send a broadcast message
+    usage: /<command> <text>
+    permission: mymemorian.broadcast
+    permission-message: 'Dazu fehlt dir die Berechtigung!'

@@ -27,7 +27,7 @@ public class CE_heal implements CommandExecutor {
 				sender.sendMessage(ChatColor.RED + "Für Hilfe gib /heal help ein");
 				return true;
 			}
-			if(args.length > 1 && args[0].equalsIgnoreCase("help")) {
+			if(args.length == 1 && args[0].equalsIgnoreCase("help")) {
 				sender.sendMessage(ChatColor.GREEN + "Benutzung:" + ChatColor.RED + " /heal <life|food>" + ChatColor.GREEN
 						+ " heilt sein Leben oder Essen");
 				sender.sendMessage(ChatColor.GREEN + "Benutzung:" + ChatColor.RED + " /heal <life|food> all" + ChatColor.GREEN
@@ -39,9 +39,11 @@ public class CE_heal implements CommandExecutor {
 			
 			if(args[0].equalsIgnoreCase("life")) {
 					Player p = (Player) sender;
-					p.setHealth(20);
-					p.sendMessage(ChatColor.GOLD + "Du wurdest geheilt :)");
-				
+					if(args.length == 1) {
+						p.setHealth(20);
+						p.sendMessage(ChatColor.GOLD + "Du wurdest geheilt :)");
+						return true;
+					}
 					if (args.length > 1 && args[1].equalsIgnoreCase("all")) {
 						if (plugin.getServer().getOnlinePlayers().length == 0) {
 							System.out.println("Langeweile? Kein Spieler online");
@@ -73,8 +75,11 @@ public class CE_heal implements CommandExecutor {
 				
 				if(args[0].equalsIgnoreCase("food")) {
 					Player p = (Player) sender;
-					p.setFoodLevel(20);
-					p.sendMessage(ChatColor.DARK_AQUA + "Du wurdest geheilt :)");
+					if(args.length == 1) {
+						p.setFoodLevel(20);
+						p.sendMessage(ChatColor.DARK_AQUA + "Du wurdest geheilt :)");
+						return true;
+					}
 					
 					if(args.length > 1 && args[1].equalsIgnoreCase("all")) {
 						if(plugin.getServer().getOfflinePlayers().length == 0) {
