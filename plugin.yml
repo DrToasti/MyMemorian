@@ -49,3 +49,14 @@ commands:
     usage: /<command> <text>
     permission: mymemorian.broadcast
     permission-message: 'Dazu fehlt dir die Berechtigung!'
+    aliases: bc
+  exp:
+    description: give a player exp
+    usage: /<command> <exp>
+    permission: mymemorian.exp
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+  test:
+    description: test commands
+    usage: /<command>
+    permission: mymemorian.test
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
