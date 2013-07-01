@@ -26,8 +26,12 @@ public class MyMemorian extends JavaPlugin {
 		this.getCommand("broadcast").setExecutor(new CE_broadcast(this));
 		this.getCommand("exp").setPermission(ChatColor.RED + "Dazu fehlt dir die Berechtigung");
 		this.getCommand("exp").setExecutor(new CE_exp(this));
-		this.getCommand("test").setPermission(ChatColor.RED + "Dazu fehlt dir die Berechtigung");
-		this.getCommand("test").setExecutor(new CE_Test(this));
+		this.getCommand("fly").setPermission(ChatColor.RED + "Dazu fehlt dir die Berechtigung");
+		this.getCommand("fly").setExecutor(new CE_fly(this));
+		this.getCommand("gamemode").setPermission(ChatColor.RED + "Dazu fehlt dir die Berechtigung");
+		this.getCommand("gamemode").setExecutor(new CE_gamemode(this));
+		this.getCommand("OP").setPermission(ChatColor.RED + "Dazu fehlt dir die Berechtigung");
+		this.getCommand("OP").setExecutor(new BlockOP(this));
 	}
 	
 	@Override
