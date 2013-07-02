@@ -52,27 +52,11 @@ commands:
     aliases: bc
   exp:
     description: give a player exp
-    usage: /<command> <exp> [Player]
+    usage: /<command> <exp>
     permission: mymemorian.exp
     permission-message: 'Dazu fehlt dir die Berechtigung!'
-  fly:
-    description: give a player fly
-    usage: /<command> [Player]
-    permission: mymemorian.fly
-    permission-message: 'Dazu fehlt dir die Berechtigung!'
-  gamemode:
-    description: change the gamemode
-    usage: /<command> <mode> [Player]
-    permission: mymemorian.gamemode
-    permission-message: 'Dazu fehlt dir die Berechtigung!'
-    aliases: gm
-  op:
-    description: give a player OP
-    usage: /<command> [Player]
-    permission: mymemorian.op
-    permission-message: 'Dazu fehlt dir die Berechtigung!'
-  deop:
-    description: deop a OP player
-    usage: /<command> [Player]
-    permission: mymemorian.deop
+  test:
+    description: test commands
+    usage: /<command>
+    permission: mymemorian.test
     permission-message: 'Dazu fehlt dir die Berechtigung!'

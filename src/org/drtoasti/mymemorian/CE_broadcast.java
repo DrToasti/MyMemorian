@@ -25,14 +25,14 @@ public class CE_broadcast implements CommandExecutor {
 			}
 			
 			if(args[0].equalsIgnoreCase("magic")) {
-				p.getServer().broadcastMessage(ChatColor.DARK_PURPLE + "[" + ChatColor.BLUE + "BROADCAST" 
-						+ ChatColor.DARK_PURPLE + "] " + ChatColor.YELLOW + ChatColor.MAGIC + builder);
+				p.getServer().broadcastMessage(ChatColor.DARK_PURPLE + "[" + ChatColor.AQUA + "BROADCAST" 
+						+ ChatColor.DARK_PURPLE + "]" + ChatColor.YELLOW + ChatColor.MAGIC + builder);
 				p.getServer().broadcastMessage(ChatColor.DARK_GREEN + "It´s Magic :o");
 			}
 			
 			else if(args.length >= 1) {
-				p.getServer().broadcastMessage(ChatColor.DARK_PURPLE + "[" + ChatColor.BLUE + "BROADCAST" 
-						+ ChatColor.DARK_PURPLE + "] " + ChatColor.RESET + builder);
+				p.getServer().broadcastMessage(ChatColor.DARK_PURPLE + "[" + ChatColor.AQUA + "BROADCAST" 
+						+ ChatColor.DARK_PURPLE + "]" + ChatColor.RESET + builder);
 				return true;
 			}
 			
