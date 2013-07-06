@@ -1,4 +1,4 @@
-package org.drtoasti.mymemorian;
+package org.drtoasti.mymemorian.commands;
      
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -6,13 +6,14 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.drtoasti.mymemorian.MyMemorian;
      
-    public class CE_give implements CommandExecutor {
+    public class Command_give implements CommandExecutor {
     	
     	@SuppressWarnings("unused")
     	private MyMemorian plugin;
     	
-    	public CE_give(MyMemorian mymemorian) {
+    	public Command_give(MyMemorian mymemorian) {
     		plugin = mymemorian;
     	}
      

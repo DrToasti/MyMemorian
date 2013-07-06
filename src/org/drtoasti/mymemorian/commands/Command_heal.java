@@ -1,16 +1,17 @@
-package org.drtoasti.mymemorian;
+package org.drtoasti.mymemorian.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.drtoasti.mymemorian.MyMemorian;
 
-public class CE_heal implements CommandExecutor {
+public class Command_heal implements CommandExecutor {
 
 	private MyMemorian plugin;
 
-	public CE_heal(MyMemorian mymemorian) {
+	public Command_heal(MyMemorian mymemorian) {
 		plugin = mymemorian;
 	}
 
@@ -40,7 +41,7 @@ public class CE_heal implements CommandExecutor {
 			if(args[0].equalsIgnoreCase("life")) {
 					Player p = (Player) sender;
 					if(args.length == 1) {
-						p.setHealth(20);
+						p.setHealth(20.0);
 						p.sendMessage(ChatColor.GOLD + "Du wurdest geheilt :)");
 						return true;
 					}
@@ -50,7 +51,7 @@ public class CE_heal implements CommandExecutor {
 							return false;
 						}
 						for (Player pl : plugin.getServer().getOnlinePlayers()) {
-							pl.setHealth(20);
+							pl.setHealth(20.0);
 						}
 						plugin.getServer().broadcastMessage(
 								ChatColor.RED + sender.getName() + ChatColor.GREEN
@@ -64,7 +65,7 @@ public class CE_heal implements CommandExecutor {
 									+ "Heilung fehlgeschlagen! Spieler nicht gefunden!");
 							return false;
 						}
-						ziel.setHealth(20);
+						ziel.setHealth(20.0);
 						ziel.sendMessage(ChatColor.GREEN + "Du wurdest von "
 								+ ChatColor.RED + sender.getName() + ChatColor.GREEN
 								+ " geheilt!");

@@ -2,7 +2,7 @@ name: MyMemorian
 main: org.drtoasti.mymemorian.MyMemorian
 version: 1.0
 author: DrToasti
-description: TestPlugin
+description: Plugin with useful commands
 
 
 commands:
@@ -52,11 +52,38 @@ commands:
     aliases: bc
   exp:
     description: give a player exp
-    usage: /<command> <exp>
+    usage: /<command> <exp> [Player]
     permission: mymemorian.exp
     permission-message: 'Dazu fehlt dir die Berechtigung!'
-  test:
-    description: test commands
-    usage: /<command>
-    permission: mymemorian.test
+  fly:
+    description: give a player fly
+    usage: /<command> [Player]
+    permission: mymemorian.fly
     permission-message: 'Dazu fehlt dir die Berechtigung!'
+  gamemode:
+    description: change the gamemode
+    usage: /<command> <mode> [Player]
+    permission: mymemorian.gamemode
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+    aliases: gm
+  op:
+    description: give a player OP
+    usage: /<command> [Player]
+    permission: mymemorian.op
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+  deop:
+    description: deop a OP player
+    usage: /<command> [Player]
+    permission: mymemorian.deop
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+  sethead:
+    description: place a Block on the head
+    usage: /<command>
+    permission: mymemorian.sethead
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+  clearinventory:
+    description: clear the inventory
+    usage: /<command>
+    permission: mymemorian.clearinventory
+    permission-message: 'Dazu fehlt dir die Berechtigung!'
+    aliases: ci

@@ -1,17 +1,18 @@
-package org.drtoasti.mymemorian;
+package org.drtoasti.mymemorian.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.drtoasti.mymemorian.MyMemorian;
 
-public class CE_broadcast implements CommandExecutor {
+public class Command_broadcast implements CommandExecutor {
 	
 	@SuppressWarnings("unused")
 	private MyMemorian plugin;
 	
-	public CE_broadcast(MyMemorian mymemorian) {
+	public Command_broadcast(MyMemorian mymemorian) {
 		plugin = mymemorian;
 	}
 	
@@ -25,14 +26,14 @@ public class CE_broadcast implements CommandExecutor {
 			}
 			
 			if(args[0].equalsIgnoreCase("magic")) {
-				p.getServer().broadcastMessage(ChatColor.DARK_PURPLE + "[" + ChatColor.AQUA + "BROADCAST" 
-						+ ChatColor.DARK_PURPLE + "]" + ChatColor.YELLOW + ChatColor.MAGIC + builder);
+				p.getServer().broadcastMessage(ChatColor.DARK_PURPLE + "[" + ChatColor.BLUE + "BROADCAST" 
+						+ ChatColor.DARK_PURPLE + "] " + ChatColor.YELLOW + ChatColor.MAGIC + builder);
 				p.getServer().broadcastMessage(ChatColor.DARK_GREEN + "It´s Magic :o");
 			}
 			
 			else if(args.length >= 1) {
-				p.getServer().broadcastMessage(ChatColor.DARK_PURPLE + "[" + ChatColor.AQUA + "BROADCAST" 
-						+ ChatColor.DARK_PURPLE + "]" + ChatColor.RESET + builder);
+				p.getServer().broadcastMessage(ChatColor.DARK_PURPLE + "[" + ChatColor.BLUE + "BROADCAST" 
+						+ ChatColor.DARK_PURPLE + "] " + ChatColor.RESET + builder);
 				return true;
 			}
 			

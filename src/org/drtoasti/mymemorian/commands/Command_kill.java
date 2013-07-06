@@ -1,15 +1,16 @@
-package org.drtoasti.mymemorian;
+package org.drtoasti.mymemorian.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.drtoasti.mymemorian.MyMemorian;
 
-public class CE_kill implements CommandExecutor {
+public class Command_kill implements CommandExecutor {
 	
 	private MyMemorian plugin;
-	public CE_kill(MyMemorian mymemorian) {
+	public Command_kill(MyMemorian mymemorian) {
 		plugin = mymemorian;
 	}
 	
@@ -21,7 +22,7 @@ public class CE_kill implements CommandExecutor {
 					System.out.println("Dieser Befehl ist nur für Spieler..");
 				}
 				Player p = (Player) sender;
-				p.setHealth(0);
+				p.setHealth(0.0);
 				plugin.getServer().broadcastMessage(ChatColor.RED + p.getName() + ChatColor.DARK_AQUA + " " +
 						" hat sich selbst getötet.");
 				return true;
@@ -33,7 +34,7 @@ public class CE_kill implements CommandExecutor {
 					return true;
 				}
 				for(Player pl : plugin.getServer().getOnlinePlayers()) {
-					pl.setHealth(0);
+					pl.setHealth(0.0);
 				}
 				plugin.getServer().broadcastMessage(ChatColor.RED + sender.getName() + ChatColor.DARK_AQUA + " hat alle Spieler getötet.");
 				return true;
@@ -45,7 +46,7 @@ public class CE_kill implements CommandExecutor {
 					sender.sendMessage(ChatColor.RED + "Fehler! Spieler nicht gefunden.");
 					return false;
 				}
-				ziel.setHealth(0);
+				ziel.setHealth(0.0);
 				sender.sendMessage(ChatColor.DARK_AQUA + "Du hast " + ChatColor.GREEN + ziel.getName() + 
 						ChatColor.DARK_AQUA + " getötet.");
 				ziel.sendMessage(ChatColor.DARK_PURPLE + "Du wurdest von " + ChatColor.RED + sender.getName() + 

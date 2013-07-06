@@ -1,16 +1,17 @@
-package org.drtoasti.mymemorian;
+package org.drtoasti.mymemorian.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.drtoasti.mymemorian.MyMemorian;
 
-public class CE_exp implements CommandExecutor {
+public class Command_exp implements CommandExecutor {
 
 	private MyMemorian plugin;
 	
-	public CE_exp(MyMemorian mymemorian) {
+	public Command_exp(MyMemorian mymemorian) {
 		plugin = mymemorian;
 	}
 	
